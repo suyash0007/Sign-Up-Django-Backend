@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+import a_module_that_does_not_exist
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,7 +48,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # Application definition
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -58,7 +59,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "accounts",
-]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
